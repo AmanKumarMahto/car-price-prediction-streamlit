@@ -13,7 +13,20 @@ st.caption("Made by Aman Kumar Mahto")
 # ----------------------------
 # Load model
 # ----------------------------
-model = pk.load(open("model.pkl", "rb"))
+loaded = pk.load(open("model.pkl","rb"))
+
+# ✅ agar dict payload hai
+if isinstance(loaded, dict):
+    model = loaded["model"]
+    brand_map = loaded["brand_map"]
+    owner_map = loaded["owner_map"]
+    fuel_map = loaded["fuel_map"]
+    seller_map = loaded["seller_map"]
+    trans_map = loaded["trans_map"]
+else:
+    # ✅ agar purana model.pkl hai (sirf model)
+    model = loaded
+
 
 # ----------------------------
 # Load dataset for dropdown values
@@ -102,3 +115,4 @@ if st.button("Predict"):
     # Predict
     pred = model.predict(input_df)[0]
     st.success(f"✅ Predicted Car Price: ₹ {int(pred):,}")
+
