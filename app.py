@@ -7,7 +7,7 @@ import pickle as pk
 # ----------------------------
 st.set_page_config(page_title="Car Price Prediction", page_icon="🚗", layout="centered")
 
-st.title(" ō͡≡o˞̶   Car Price Prediction ML App")
+st.title(" ō͡≡o˞̶Car Price Prediction ML App")
 st.caption("Made by Aman Kumar Mahto")
 
 # ----------------------------
