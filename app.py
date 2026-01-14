@@ -7,7 +7,7 @@ import pickle as pk
 # ----------------------------
 st.set_page_config(page_title="Car Price Prediction", page_icon="🚗", layout="centered")
 
-st.title("🚗 Car Price Prediction ML App")
+st.title(" ō͡≡o˞̶  Car Price Prediction ML App")
 st.caption("Made by Aman Kumar Mahto")
 
 # ----------------------------
@@ -115,4 +115,5 @@ if st.button("Predict"):
     # Predict
     pred = model.predict(input_df)[0]
     st.success(f"✅ Predicted Car Price: ₹ {int(pred):,}")
+
 
